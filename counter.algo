@@ -1,0 +1,19 @@
+
+characters_counter : INTEGER;
+words_counter : INTEGER;
+vowels_counter : INTEGER;
+
+
+FOR i FROM senteces STEP step  DO
+    characters_counter := characters_counter +1
+
+    IF (i := " " or i := ".") THEN
+        words_counter := words_counter +1
+    END_IF
+
+    FOR j FROM "aeuio" STEP step  DO
+        IF (CHAR j := CHAR i) THEN
+            vowels_counter := vowels_counter +1
+        END_IF
+    END_FOR
+END_FOR
